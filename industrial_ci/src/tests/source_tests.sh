@@ -31,6 +31,11 @@ ici_time_start init_ici_environment
 # Define more env vars
 BUILDER=catkin
 ROSWS=wstool
+echo "Changing owner of ssh"
+sudo chown -R root /root/.ssh/config
+echo "Changing permissions of ssh"
+sudo chmod 600 /root/.ssh/config
+
 
 ici_time_end  # init_ici_environment
 
